@@ -1,6 +1,4 @@
 import './App.css'
-import Genre from './Genre';
-import Library from './Library';
 function App() {
   
   const bookData = {
@@ -20,14 +18,11 @@ function App() {
       {"title": "Where the Wild Things Are", "author": "Maurice Sendak", "price": 8.00}
     ]
   };
-  
-  const [Genre, setGenre] = useState(true);
 
   return (
     <div>
       <h1>Bookstore App</h1>
-      <Genre setGenre={setGenre} />
-      <Library books={bookData[selectedGenre]} />
+      <GenreSelection data={bookData} />
     </div>
   );
 }
